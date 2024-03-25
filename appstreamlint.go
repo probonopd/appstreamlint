@@ -41,26 +41,26 @@ type Image struct {
 func main() {
 	if len(os.Args) < 2 {
 		fmt.Println("Usage: appstreamlint <file>")
-		return
+		os.Exit(1)
 	}
 	filePath := os.Args[1]
 	xmlFile, err := os.Open(filePath)
 	if err != nil {
 		fmt.Println("Error opening file:", err)
-		return
+		os.Exit(1)
 	}
 	defer xmlFile.Close()
 
 	byteValue, err := ioutil.ReadAll(xmlFile)
 	if err != nil {
 		fmt.Println("Error reading file:", err)
-		return
+		os.Exit(1)
 	}
 
 	var component Component
 	if err := xml.Unmarshal(byteValue, &component); err != nil {
 		fmt.Println("Error parsing XML:", err)
-		return
+		os.Exit(1)
 	}
 
 	// Check filename
@@ -170,7 +170,7 @@ func main() {
 	}
 
 	// https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-screenshots
-	
+
 	if len(component.Screenshots) == 0 {
 		fmt.Println("Warning: No screenshots tag found")
 	} else {
