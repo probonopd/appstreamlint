@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.example.appname</id>
+  
+  <name>AppName</name>
+  <summary>Summary of the application</summary>
+  
+  <metadata_license>MIT</metadata_license>
+  <project_license>0BSD</project_license>
+  
+  <description>
+    <p>
+      Summary of the application. Can be longer.
+    </p>
+  </description>
+  
+  <launchable type="desktop-id">myapplication.desktop</launchable>
+  <screenshots>
+  <screenshot type="default">
+    <caption>The FooBar main window.</caption>
+    <image type="source" width="1600" height="900">https://example.com/foobar/screenshot-1.png</image>
+  </screenshot>
+  <screenshot>
+    <caption>Foobar showing the frobnicate functionality.</caption>
+    <image type="source" width="1600" height="900">https://example.com/foobar/screenshot-2.png</image>
+  </screenshot>
+  <screenshot>
+    <video codec="av1" width="1600" height="900">https://example.com/foobar/screencast.mkv</video>
+  </screenshot>
+
+  <screenshot environment="plasma-mobile">
+    <caption>The FooBar main window, but on Plasma Mobile</caption>
+    <image type="source" width="1600" height="900">https://example.com/foobar/screenshot-1_plasma-mobile.png</image>
+  </screenshot>
+
+  <screenshot environment="gnome:dark">
+    <caption>The FooBar main window, on GNOME in dark mode</caption>
+    <image type="source" width="1600" height="900">https://example.com/foobar/screenshot-1_gnome_dark.png</image>
+  </screenshot>
+ </screenshots>
+</component>
